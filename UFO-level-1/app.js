@@ -1,12 +1,12 @@
 // Assign the data from data.js to a variable
 var tableData = data;
-// console.log(tableData);
+console.log(tableData);
 
 // Select the button
 var button = d3.select("#filter_btn");
 
 // Select the form
-var form = d3.select("#filters");
+var form = d3.select("#form");
 
 // Create event handlers 
 button.on("click", runEnter);
