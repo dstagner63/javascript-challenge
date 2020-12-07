@@ -1,3 +1,6 @@
+// Get a reference to the table body
+var tbody = d3.select("tbody");
+
 // Assign the data from data.js to a variable
 var tableData = data;
 console.log(tableData);
@@ -31,30 +34,13 @@ function runEnter() {
 
   console.log(filteredData);
 
+  var date = tableData.map(siting => siting.datetime);
+  var city = tableData.map(siting => siting.city);
+  var state = tableData.map(siting => siting.state);
+  var country = tableData.map(siting => siting.country);
+  var shape = tableData.map(siting => siting.shape);
+  var duration = tableData.map(siting => siting.durationMinutes);
+  var comments = tableData.map(siting => siting.comments);
+
+
 };
-
-//   // BONUS: Calculate summary statistics for the age field of the filtered data
-
-//   // First, create an array with just the age values
-//   var ages = filteredData.map(siting => siting.age);
-
-//   // Next, use math.js to calculate the mean, median, mode, var, and std of the ages
-//   var mean = math.mean(ages);
-//   var median = math.median(ages);
-//   var mode = math.mode(ages);
-//   var variance = math.var(ages);
-//   var standardDeviation = math.std(ages);
-
-//   // Then, select the unordered list element by class name
-//   var list = d3.select(".summary");
-
-//   // remove any children from the list to
-//   list.html("");
-
-//   // append stats to the list
-//   list.append("li").text(`Mean: ${mean}`);
-//   list.append("li").text(`Median: ${median}`);
-//   list.append("li").text(`Mode: ${mode}`);
-//   list.append("li").text(`Variance: ${variance}`);
-//   list.append("li").text(`Standard Deviation: ${standardDeviation}`);
-// };
