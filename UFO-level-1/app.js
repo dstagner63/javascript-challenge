@@ -1,4 +1,4 @@
-// Get a reference to the table body
+// Get a reference to the table body. Not sure if this is right???
 var tbody = d3.select("tbody");
 
 // Assign the data from data.js to a variable
@@ -34,13 +34,14 @@ function runEnter() {
 
   console.log(filteredData);
 
-  var date = tableData.map(siting => siting.datetime);
-  var city = tableData.map(siting => siting.city);
-  var state = tableData.map(siting => siting.state);
-  var country = tableData.map(siting => siting.country);
-  var shape = tableData.map(siting => siting.shape);
-  var duration = tableData.map(siting => siting.durationMinutes);
-  var comments = tableData.map(siting => siting.comments);
+  var date = tableData.datetime;
+  // var date = tableData.map(siting => siting.datetime);
+  // var city = tableData.map(siting => siting.city);
+  // var state = tableData.map(siting => siting.state);
+  // var country = tableData.map(siting => siting.country);
+  // var shape = tableData.map(siting => siting.shape);
+  // var duration = tableData.map(siting => siting.durationMinutes);
+  // var comments = tableData.map(siting => siting.comments);
 
 
 };
