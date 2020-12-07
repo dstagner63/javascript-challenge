@@ -1,11 +1,12 @@
-// from data.js
+// Assign the data from data.js to a variable
 var tableData = data;
+// console.log(tableData);
 
 // Select the button
-var button = d3.select("#button");
+var button = d3.select("#filter_btn");
 
 // Select the form
-var form = d3.select("#form");
+var form = d3.select("#filters");
 
 // Create event handlers 
 button.on("click", runEnter);
@@ -29,6 +30,8 @@ function runEnter() {
   var filteredData = tableData.filter(siting => siting.datetime === inputValue);
 
   console.log(filteredData);
+
+};
 
 //   // BONUS: Calculate summary statistics for the age field of the filtered data
 
@@ -55,4 +58,3 @@ function runEnter() {
 //   list.append("li").text(`Variance: ${variance}`);
 //   list.append("li").text(`Standard Deviation: ${standardDeviation}`);
 // };
-
