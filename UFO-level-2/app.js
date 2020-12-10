@@ -44,15 +44,15 @@ button.on("click", function() {
  var newShape = inputShape.property("value");
 
  // Research this
-var filteredData = data.filter(((d => d.datetime === newDate)  || (!newDate))
-  &&
- 
-  ((d => d.city === newCity)  || (!newCity))   &&
-  // ((d => d.state === newState)  || (!newState)) &&
-  // ((d => d.country === newCountry)  || (!newCountry)) &&
-  // ((d => d.shape === newShape)  || (!newShape))
 
-  );
+var filteredData = data.filter((d =>( (d.datetime === newDate)  || (!newDate))
+&& (( d.city === newCity)  || (!newCity))
+&& ((d.state === newState)  || (!newState))
+&&  ((d.country === newCountry)  || (!newCountry))
+&& ((d.shape === newShape)  || (!newShape))
+
+)
+);
 
 filteredData.forEach(function(sitings) {
   console.log(sitings);
