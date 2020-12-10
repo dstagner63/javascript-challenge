@@ -27,7 +27,6 @@ button.on("click", function() {
 
  tbody.html("");
 
-
  //filter data
  var inputdate = d3.select("#datetime");
  var newDate = inputdate.property("value");
@@ -44,19 +43,16 @@ button.on("click", function() {
  var inputShape = d3.select("#shape");
  var newShape = inputShape.property("value");
 
-
  // Research this
 var filteredData = data.filter(((d => d.datetime === newDate)  || (!newDate))
   &&
  
-
   ((d => d.city === newCity)  || (!newCity))   &&
   // ((d => d.state === newState)  || (!newState)) &&
   // ((d => d.country === newCountry)  || (!newCountry)) &&
   // ((d => d.shape === newShape)  || (!newShape))
 
   );
-
 
 filteredData.forEach(function(sitings) {
   console.log(sitings);
@@ -68,7 +64,6 @@ filteredData.forEach(function(sitings) {
     cell.text(value);
   });
 });
-
 
 console.log(filteredData);
 
